@@ -17,7 +17,7 @@ class Data:
     def __init__(self, conn_string: str, bot: TeleBot):
         self.bot = bot
 
-        me.connect(host=conn_string, tlsCAFile=certifi.where())
+        me.connect(host=conn_string, tlsCAFile=certifi.where(), connect=False)
         print("connection success ")
 
         # if there is no ejf table in DB - then create it
